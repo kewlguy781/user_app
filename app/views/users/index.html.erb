@@ -1,0 +1,13 @@
+<h1>Users#index</h1>
+<p>Find me in app/views/users/index.html/erb</p>
+<hr />
+<h1>Users </h1>
+<% @users.each do |user| %>
+  <h2><%= user.first_name %> <%= user.last_name %></h2><br />
+  Age: <%= user.age %><br />
+  Hair Color: <%= user.hair_color %>
+  Eye Color: <%= user.eye_color %>
+  Gender: <%= user.gender %>
+  Alive? <%= user.alive %>
+  <%= link_to "User Page", user_path(user) %>
+<% end %>
